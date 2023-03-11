@@ -301,10 +301,10 @@
                 <form id="my-form">
                     <div class="row">
                         <div class="col-sm-6">
-                            <input id="inputName" type="text" name="from_name" class="form-control mt-x-0" placeholder="Name" required>
+                            <input id="inputName" type="text" name="your_name" class="form-control mt-x-0" placeholder="Name" required>
                         </div>
                         <div class="col-sm-6">
-                            <input id="inputEmail" type="email" name="email_id" class="form-control" placeholder="Email" required>
+                            <input id="inputEmail" type="email" name="Email_ID" class="form-control" placeholder="Email" required>
                         </div>
                         <div class="col-sm-12">
                             <textarea id="inputMessage" name="message"  class="form-control" placeholder="Message" required></textarea>
@@ -320,14 +320,14 @@
                     });
                     function sendEmail() {
                         // Get the values from the form
-                        var name = document.getElementById('my-form').elements.namedItem("from_name").value;
-                        var email = document.getElementById('my-form').elements.namedItem("email_id").value;
+                        var name = document.getElementById('my-form').elements.namedItem("your_name").value;
+                        var email = document.getElementById('my-form').elements.namedItem("Email_ID").value;
                         var message = document.getElementById('my-form').elements.namedItem("message").value;
                         // Send the email using the EmailJS SDK
                         emailjs.send('service_4vox02n', 'template_c2yeoqj', {
-                            "from_name": name,
-                            "from_email": email,
-                            "message_html": message
+                            "your_name": name,
+                            "Email_ID": email,
+                            "message": message
                         })
                             .then(function(response) {
                                 alert("Email sent!");
